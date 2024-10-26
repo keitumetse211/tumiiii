@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleInfo(destinationId) {
+            const moreInfo = document.getElementById(destinationId);
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destination-list">
+            <!-- Destination 1: Bali, Indonesia -->
+            <div class="destination-item">
+                <img src="images/bali.jpg" alt="Bali, Indonesia">
+                <h2>Bali, Indonesia</h2>
+                <p>Discover the beauty of Bali, known for its breathtaking beaches, vibrant culture, and stunning rice terraces.</p>
+                <a href="javascript:void(0);" onclick="toggleInfo('bali-more')">Learn more</a>
+                <div id="bali-more" class="more-info" style="display: none;">
+                    <p>Bali is home to beautiful temples, surf spots, and lush landscapes. Enjoy yoga retreats, beach parties, and explore the unique Balinese culture.</p>
+                </div>
+            </div>
+            
+            <!-- Destination 2: Paris, France -->
+            <div class="destination-item">
+                <img src="images/paris.jpg" alt="Paris, France">
+                <h2>Paris, France</h2>
+                <p>Experience the romance of Paris, famous for its iconic landmarks, art, and cuisine.</p>
+                <a href="javascript:void(0);" onclick="toggleInfo('paris-more')">Learn more</a>
+                <div id="paris-more" class="more-info" style="display: none;">
+                    <p>From the Eiffel Tower to the Louvre, Paris offers a wealth of experiences. Stroll along the Seine, indulge in fine dining, and explore its charming neighborhoods.</p>
+                </div>
+            </div>
+            
+            <!-- Destination 3: Kyoto, Japan -->
+            <div class="destination-item">
+                <img src="images/kyoto.jpg" alt="Kyoto, Japan">
+                <h2>Kyoto, Japan</h2>
+                <p>Visit Kyoto, a top choice for travelers seeking traditional culture and beautiful landscapes.</p>
+                <a href="javascript:void(0);" onclick="toggleInfo('kyoto-more')">Learn more</a>
+                <div id="kyoto-more" class="more-info" style="display: none;">
+                    <p>Known for its historic temples, beautiful gardens, and traditional tea houses, Kyoto is perfect for experiencing Japanese culture. Don't miss the cherry blossoms in spring!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multimedia Section: Travel Videos -->
+        <section class="media-section">
+            <h2>Explore the World with Our Featured Travel Videos</h2>
+
+            <div class="video-container">
+                <!-- Travel Video 1 -->
+                <video controls>
+                    <source src="media/travel video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Destination Website</p>
+    </footer>
+</body>
+</html>
